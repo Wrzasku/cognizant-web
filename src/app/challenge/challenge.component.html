@@ -1,0 +1,21 @@
+<style>
+
+</style>
+
+<div class="challenge_main">
+
+  <div>
+  <mat-form-field appearance="fill">
+    <mat-label>select challenge</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option *ngFor="let challenge of challenges" [value]="challenge.exercise">
+        {{challenge.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  </div>
+  <div class="exercise">
+    <p ng-hide="!selected"> Exercise description</p>
+  {{selected}}
+  </div>
+</div>
